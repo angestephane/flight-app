@@ -1,0 +1,146 @@
+<div [formGroup]="searchFlightForm" class="seach-flight" id="search-flight">
+  <fieldset id="search">
+    <!-- Rangé : choix de la compagnie  -->
+    <div>
+      <p-dropdown
+        [options]="company"
+        optionLabel="name"
+        formControlName="compagnie"
+        placeholder="Select a City"
+      ></p-dropdown>
+    </div>
+    <!-- FIN -->
+
+    <!-- Rangé : details sur la compagnie  -->
+    <div
+      class="flex flex-column justify-content-center md:flex-row card-container mt-3"
+    >
+      <div
+        class="flex align-items-center justify-content-center text-white m-2"
+      >
+        <p-dropdown
+          [options]="typeVoyage"
+          formControlName="modeVoyage"
+          optionLabel="name"
+          (onChange)="checkValueSelected($event.value.name)"
+          styleClass="w-10rem "
+          placeholder="Type de voyage"
+        ></p-dropdown>
+      </div>
+
+      <div
+        class="flex align-items-center justify-content-center text-white m-2"
+      >
+        <p-dropdown
+          [options]="typeVole"
+          formControlName="vole"
+          optionLabel="name"
+          styleClass="w-10rem"
+          placeholder="Type de vol"
+        ></p-dropdown>
+      </div>
+      <div
+        class="flex align-items-center justify-content-center text-white m-2 field"
+      >
+        <input
+          type="text"
+          placeholder="Type d'avion"
+          pInputText
+          formControlName="avion"
+        />
+      </div>
+      <div
+        class="flex align-items-center justify-content-center text-white m-2 field"
+      >
+        <span class="p-input-icon-right">
+          <i class="pi pi-arrow-down-right" style="font-size: 1rem"></i>
+          <input
+            type="text"
+            placeholder="En provenance de "
+            pInputText
+            formControlName="prov"
+          />
+        </span>
+      </div>
+      <div
+        class="flex align-items-center justify-content-center text-white m-2 field"
+      >
+        <span class="p-input-icon-right">
+          <i class="pi pi-arrow-up-right" style="font-size: 1rem"></i>
+          <input
+            type="text"
+            placeholder="A destination de "
+            pInputText
+            formControlName="des"
+          />
+        </span>
+      </div>
+    </div>
+    <!-- FIN -->
+
+    <!-- Rangé : Choix de date  -->
+    <div
+      class="flex flex-column justify-content-center md:flex-row card-container mt-3"
+    >
+      <div
+        class="flex align-items-center justify-content-center text-white m-2 field"
+      >
+        <span class="p-input-icon-right">
+          <p-calendar
+            formControlName="dateDeMin"
+            dateFormat="dd/mm/yy"
+            [minDate]="minDateValue"
+            [maxDate]="maxDateValue"
+            [showIcon]="true"
+            icon="pi pi-calendar"
+            placeholder="Date de depart"
+          ></p-calendar>
+        </span>
+      </div>
+      <div
+        class="align-items-center justify-content-center text-white m-2 field"
+        [ngStyle]="{ display: showDateRetour ? 'flex' : 'none' }"
+      >
+        <span class="p-input-icon-right">
+          <p-calendar
+            formControlName="dateDepMax"
+            dateFormat="dd/mm/yy"
+            [minDate]="minDateValue"
+            [maxDate]="maxDateValue"
+            [showIcon]="true"
+            icon="pi pi-calendar"
+            placeholder="Date de retour"
+          ></p-calendar>
+        </span>
+      </div>
+    </div>
+    <!-- FIN -->
+
+    <!-- Rangé : bouton validé ou reset   -->
+    <div
+      class="flex flex-column justify-content-center md:flex-row card-container mt-3"
+    >
+      <div
+        class="flex align-items-center justify-content-center text-white m-2 field"
+      >
+        <p-button
+          label="Recherche"
+          icon="pi pi-search"
+          iconPos="right"
+          (click)="searchFlight()"
+        ></p-button>
+      </div>
+      <div
+        class="flex align-items-center justify-content-center text-white m-2 field"
+      >
+        <p-button
+          label="Réinitialiser"
+          icon="pi pi-trash"
+          iconPos="right"
+          (click)="resteForm(searchFlightForm)"
+        ></p-button>
+      </div>
+    </div>
+    <!-- FIN -->
+  </fieldset>
+</div>
