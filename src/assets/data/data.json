@@ -1,0 +1,109 @@
+[
+  {
+    "idVoyage": 1,
+    "compagnieName": "Air France",
+    "modeVoyage": "Allez retour",
+    "typeVol": "direct",
+    "typeAvion": "Airbus A380",
+    "provenance": "France",
+    "destination": "Côte d'Ivoire",
+    "dateDepart": "2022-05-09T13:49:51.141Z",
+    "dateArrive": "2022-05-10T13:49:51.141Z"
+  },
+
+  {
+    "idVoyage": 2,
+    "compagnieName": "Air Corsica",
+    "modeVoyage": "Allez simple",
+    "typeVol": "direct",
+    "typeAvion": "6 ATR72-500",
+    "provenance": "Marseille",
+    "destination": "Ajaccio",
+    "dateDepart": "2022-04-13T13:49:51.141Z",
+    "dateArrive": "2018-12-10T13:49:51.141Z"
+  },
+
+  {
+    "idVoyage": 3,
+    "compagnieName": "Air Senegal",
+    "modeVoyage": "Allez simple",
+    "typeVol": "Non direct (escale à...)",
+    "typeAvion": "Airbus A 321-211",
+    "provenance": "Dakar",
+    "destination": "Paris",
+    "dateDepart": "2021-10-30T13:49:51.141Z",
+    "dateArrive": "2021-10-31T13:49:51.141Z"
+  },
+
+  {
+    "idVoyage": 4,
+    "compagnieName": "Air Caraibes",
+    "modeVoyage": "Allez simple",
+    "typeVol": "Non direct (escale à...)",
+    "typeAvion": " Airbus A350 XWB",
+    "provenance": "Paris ORY",
+    "destination": "Saint-Martin - Juliana SXM",
+    "dateDepart": "2021-08-11T13:49:51.141Z",
+    "dateArrive": "2018-08-12T13:49:51.141Z"
+  },
+
+  {
+    "idVoyage": 5,
+    "compagnieName": "Aegean Airlines",
+    "modeVoyage": "Allez simple",
+    "typeVol": "direct",
+    "typeAvion": "Avro RJ100",
+    "provenance": "Addis abeba",
+    "destination": "Amsterdam",
+    "dateDepart": "2022-05-13T13:49:51.141Z",
+    "dateArrive": "2022-05-13T13:49:51.141Z"
+  },
+
+  {
+    "idVoyage": 6,
+    "compagnieName": "ASL Airlines France",
+    "modeVoyage": "Allez retour",
+    "typeVol": "direct",
+    "typeAvion": "Boeing 737-300 QC",
+    "provenance": "Lille",
+    "destination": "Oran",
+    "dateDepart": "2020-09-10T13:49:51.141Z",
+    "dateArrive": "2020-09-10T13:49:51.141Z"
+  },
+
+  {
+    "idVoyage": 7,
+    "compagnieName": "Austrian Airlines",
+    "modeVoyage": "Allez simple",
+    "typeVol": "direct",
+    "typeAvion": "Airbus A320-200",
+    "provenance": "Nice",
+    "destination": "Tirani",
+    "dateDepart": "2022-01-25T13:49:51.141Z",
+    "dateArrive": "2022-01-25T13:49:51.141Z"
+  },
+
+  {
+    "idVoyage": 8,
+    "compagnieName": "Alitalia",
+    "modeVoyage": "Allez simple",
+    "typeVol": "Non direct (escale à...)",
+    "typeAvion": "A320neo",
+    "provenance": "Aalesund AES",
+    "destination": "Aberdeen (UK) ABZ",
+    "dateDepart": "2021-07-18T13:49:51.141Z",
+    "dateArrive": "2021-07-20T13:49:51.141Z"
+  },
+
+  {
+    "idVoyage": 9,
+    "compagnieName": "Ariana Afghan Airlines",
+    "modeVoyage": "Allez retour",
+    "typeVol": "direct",
+    "typeAvion": "Boeing 727-100",
+    "provenance": "kabul",
+    "destination": "dubai",
+    "dateDepart": "2022-11-12T13:49:51.141Z",
+    "dateArrive": "2022-11-12T13:49:51.141Z"
+  }
+]

@@ -20,7 +20,7 @@ export class SharedService {
     this._filterSearchForm = new FormGroup({
       compagnie: new FormControl(''),
       modeVoyage: new FormControl(''),
-      vole: new FormControl(''),
+      vol: new FormControl(''),
       avion: new FormControl(''),
       prov: new FormControl(''),
       des: new FormControl(''),

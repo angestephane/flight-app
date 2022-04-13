@@ -1,0 +1,55 @@
+<div class="mt-4 m-4">
+  <p-table
+    [value]="flights"
+    [paginator]="true"
+    [rows]="5"
+    selectionMode="multiple"
+    (onRowSelect)="onRowSelect($event)"
+    (onRowUnselect)="onRowUnselect($event)"
+    [(selection)]="selectedFlight"
+    dataKey="idVoyage"
+  >
+    <ng-template pTemplate="header" let-flight>
+      <th style="width: 3rem">
+        <p-tableHeaderCheckbox
+          (click)="selectRow(e.checked)"
+          #e
+        ></p-tableHeaderCheckbox>
+      </th>
+      <th pSortableColumn="compagnieName">
+        Compagnie <p-sortIcon field="compagnieName"></p-sortIcon>
+      </th>
+      <th>Type voyage</th>
+      <th>Type vol</th>
+      <th pSortableColumn="typeAvion">
+        Appareil <p-sortIcon field="typeAvion"></p-sortIcon>
+      </th>
+      <th pSortableColumn="provenance">
+        Depart <p-sortIcon field="provenance"></p-sortIcon>
+      </th>
+      <th pSortableColumn="destination">
+        Destination <p-sortIcon field="destination"></p-sortIcon>
+      </th>
+      <th pSortableColumn="dateDepart">
+        Date depart <p-sortIcon field="dateDepart"></p-sortIcon>
+      </th>
+      <th pSortableColumn="dateArrive">
+        Date Arrivée <p-sortIcon field="dateArrive"></p-sortIcon>
+      </th>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-flight>
+      <tr>
+        <td><p-tableCheckbox [value]="flight"></p-tableCheckbox></td>
+        <td>{{ flight.compagnieName }}</td>
+        <td>{{ flight.modeVoyage }}</td>
+        <td>{{ flight.typeVol }}</td>
+        <td>{{ flight.typeAvion }}</td>
+        <td>{{ flight.provenance }}</td>
+        <td>{{ flight.destination }}</td>
+        <td>{{ flight.dateDepart | date: "dd/MM/yyyy" }}</td>
+        <td>{{ flight.dateArrive | date: "dd/MM/yyyy" }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
