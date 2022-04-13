@@ -2,3 +2,10 @@ td,
 thead {
   text-align: center !important;
 }
+th {
+  background-color: #eeeeee !important;
+  padding: 25px 0px;
+}
+p-table {
+  background-color: #eeeeee;
+}

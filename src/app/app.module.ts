@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 //other module
-import { SharedModule } from './shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FlightModule } from './flight/flight.module';
 
@@ -15,10 +14,9 @@ import { FlightModule } from './flight/flight.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
-    FlightModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
+    FlightModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

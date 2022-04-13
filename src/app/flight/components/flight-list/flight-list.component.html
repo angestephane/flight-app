@@ -1,6 +1,7 @@
 <div class="mt-4 m-4">
   <p-table
     [value]="flights"
+    styleClass="p-datatable-gridlines"
     [paginator]="true"
     [rows]="5"
     selectionMode="multiple"
@@ -17,7 +18,8 @@
         ></p-tableHeaderCheckbox>
       </th>
       <th pSortableColumn="compagnieName">
-        Compagnie <p-sortIcon field="compagnieName"></p-sortIcon>
+        Compagnie
+        <p-sortIcon field="compagnieName"></p-sortIcon>
       </th>
       <th>Type voyage</th>
       <th>Type vol</th>
