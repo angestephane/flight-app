@@ -1,7 +1,8 @@
-<div class="mt-4 m-4">
+<div class="mt-4 table-container">
   <p-table
     [value]="flights"
     styleClass="p-datatable-gridlines"
+    style="background: red !important"
     [paginator]="true"
     [rows]="5"
     selectionMode="multiple"
@@ -30,13 +31,13 @@
         Depart <p-sortIcon field="provenance"></p-sortIcon>
       </th>
       <th pSortableColumn="destination">
-        Destination <p-sortIcon field="destination"></p-sortIcon>
+        Arrivée <p-sortIcon field="destination"></p-sortIcon>
       </th>
       <th pSortableColumn="dateDepart">
-        Date depart <p-sortIcon field="dateDepart"></p-sortIcon>
+        Date dep <p-sortIcon field="dateDepart"></p-sortIcon>
       </th>
       <th pSortableColumn="dateArrive">
-        Date Arrivée <p-sortIcon field="dateArrive"></p-sortIcon>
+        Date Arr <p-sortIcon field="dateArrive"></p-sortIcon>
       </th>
     </ng-template>
 

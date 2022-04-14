@@ -6,6 +6,6 @@ th {
   background-color: #eeeeee !important;
   padding: 25px 0px;
 }
-p-table {
-  background-color: #eeeeee;
+.table-container {
+  width: 100%;
 }

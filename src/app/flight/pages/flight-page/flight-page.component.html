@@ -1,9 +1,55 @@
 <div class="surface-ground px-4 py-5 md:px-6 lg:px-8">
-  <div class="grid">
-    <div></div>
-    <div class="col-12 md:col-8 lg:col-6">
-      <search-flight></search-flight>
+  <div class="flex">
+    <div>
+      <menu-gauche></menu-gauche>
+    </div>
+    <div>
+      <p-fieldset legend="Filtrer vos recherche" [toggleable]="true">
+        <search-flight></search-flight>
+      </p-fieldset>
     </div>
   </div>
-  <flight-list></flight-list>
+  <p-divider></p-divider>
+
+  <!-- Section tableau -->
+  <div class="surface-section px-4 py-5 md:px-12 lg:px-8 mt-5">
+    <!-- Conteneur du header -->
+    <div
+      class="flex align-items-start flex-column lg:justify-content-between lg:flex-row"
+    >
+      <!-- Titre du tableau -->
+      <div class="font-medium text-3xl text-900">Vols</div>
+      <!-- Fin section -->
+
+      <!-- Données relatives au tableau -->
+      <div class="flex align-items-center text-700 flex-wrap">
+        <div class="mr-5 flex align-items-center">
+          <i class="pi pi-check-square mr-2"></i>
+          <span>{{ countRowSelectedText(value) }}</span>
+        </div>
+        <div class="mr-5 flex align-items-center">
+          <i class="pi pi-download mr-2"></i>
+          <span>{{ totalRecord }} Enregistrements</span>
+        </div>
+        <div class="flex align-items-center">
+          <i class="pi pi-clock mr-2"></i>
+          <span>Mise à jour il y 2.32m </span>
+        </div>
+      </div>
+      <!-- Fin section -->
+    </div>
+    <!-- Fin header -->
+
+    <!-- Section - affichage du tableau -->
+    <div class="flex align-items-start">
+      <flight-list (valueRowSelected)="getValueRowSelected($event)">
+      </flight-list>
+    </div>
+    <!-- FIn section -->
+  </div>
+  <!-- Fin section -->
+  <p-divider></p-divider>
+  <div style="text-align: center">
+    &copy; <span class="footer-text">By Ange Stephane</span>
+  </div>
 </div>

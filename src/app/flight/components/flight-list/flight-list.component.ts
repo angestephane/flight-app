@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Flight } from 'src/app/models/flight.model';
 import { FlightSourceService } from '../../services/flight-source.service';
 
@@ -10,6 +10,8 @@ import { FlightSourceService } from '../../services/flight-source.service';
 export class FlightListComponent implements OnInit {
   flights: Array<Flight>;
   cols: Array<any>;
+
+  @Output() valueRowSelected: EventEmitter<number> = new EventEmitter();
 
   selectedFlight: Array<Flight>;
 
@@ -33,6 +35,7 @@ export class FlightListComponent implements OnInit {
    */
   onRowSelect(event: any) {
     console.log('event data : ', this.selectedFlight);
+    this.valueRowSelected.emit(this.selectedFlight.length);
   }
 
   /**
@@ -41,6 +44,7 @@ export class FlightListComponent implements OnInit {
    */
   onRowUnselect(event: any) {
     console.log('row unselect : ', this.selectedFlight);
+    this.valueRowSelected.emit(this.selectedFlight.length);
   }
 
   /**
@@ -51,7 +55,9 @@ export class FlightListComponent implements OnInit {
   selectRow(checkValue: boolean) {
     if (checkValue) {
       this.selectedFlight = this.flights;
-      console.log(this.selectedFlight);
+      this.valueRowSelected.emit(this.selectedFlight.length);
+    } else {
+      this.valueRowSelected.emit(0);
     }
   }
 }
